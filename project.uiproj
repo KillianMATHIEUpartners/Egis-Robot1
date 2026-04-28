@@ -1,6 +1,6 @@
 {
-  "Name": "AR",
+  "Name": "ERPCommander_Robot5",
   "ProjectType": "Process",
-  "Description": "Blank Process",
+  "Description": "Robotic Enterprise Framework",
   "MainFile": "Main.xaml"
 }

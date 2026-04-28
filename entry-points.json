@@ -3,8 +3,22 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "0ab3ebe0-43af-4478-801d-24b2ce314f8a",
-      "type": "process"
+      "uniqueId": "668decb6-9308-45b1-a1af-5410adf4007f",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_OrchestratorQueueName": {
+            "type": "string",
+            "description": "Allows the Orchestrator queue name to be passed as an argument, instead of only being defined in the configuration file."
+          },
+          "in_OrchestratorQueueFolder": {
+            "type": "string",
+            "description": "Allows the Orchestrator folder name where the queue is created to be passed as an argument, instead of only being defined in the configuration file."
+          }
+        },
+        "required": []
+      }
     }
   ]
 }
