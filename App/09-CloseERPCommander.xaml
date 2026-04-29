@@ -1,4 +1,8 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CloseERPCommander" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CloseERPCommander" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_ERPCommanderPath" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>Microsoft.VisualBasic</x:String>
@@ -134,39 +138,39 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_84">
+  <Sequence sap:VirtualizedContainerService.HintSize="815,731.6566666666666" sap2010:WorkflowViewState.IdRef="Sequence_84">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Fermeture - Recherche" sap:VirtualizedContainerService.HintSize="450,57.333333333333336" sap2010:WorkflowViewState.IdRef="Sequence_83">
+    <Sequence DisplayName="Fermeture - Recherche" sap:VirtualizedContainerService.HintSize="504,917" sap2010:WorkflowViewState.IdRef="Sequence_83">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Search" sap:VirtualizedContainerService.HintSize="502,938" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" OpenMode="Never" ScopeGuid="4c0a5abf-7fff-4ddb-bab0-8266e4346153" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Search" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="470,857" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" OpenMode="Never" ScopeGuid="4c0a5abf-7fff-4ddb-bab0-8266e4346153" Version="V2" WindowResize="Maximize">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,618" sap2010:WorkflowViewState.IdRef="Sequence_82">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,611" sap2010:WorkflowViewState.IdRef="Sequence_82">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="122eecc8-d388-455b-bb24-5110f0908dd2" DisplayName="CV Screen - Insertion des filtres et recherche" sap:VirtualizedContainerService.HintSize="434,555.3333333333334" sap2010:WorkflowViewState.IdRef="CVScope_6" SendOnPremData="False" UseLocalServer="True" Version="V6">
+              <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="122eecc8-d388-455b-bb24-5110f0908dd2" DisplayName="CV Screen - Insertion des filtres et recherche" sap:VirtualizedContainerService.HintSize="434,551" sap2010:WorkflowViewState.IdRef="CVScope_6" SendOnPremData="False" UseLocalServer="True" Version="V6">
                 <p:CVScope.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
                     </ActivityAction.Argument>
                     <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_76">
-                      <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: CloseButton (1246,1,19,18)&quot;]" DesignTimeCacheId="122eecc8-d388-455b-bb24-5110f0908dd2" DesignTimeScaleFactor="1.5" DisplayName="CV Click - CloseButton" sap:VirtualizedContainerService.HintSize="400,211.33333333333334" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_8" InformativeScreenshot="d7e874c3ca7b2403776b5c62049d0aca" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                      <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: CloseButton (1246,1,19,18)&quot;]" DesignTimeCacheId="122eecc8-d388-455b-bb24-5110f0908dd2" DesignTimeScaleFactor="1.5" DisplayName="CV Click - CloseButton" sap:VirtualizedContainerService.HintSize="400,210" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_8" InformativeScreenshot="d7e874c3ca7b2403776b5c62049d0aca" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
                         <p:CvClickWithDescriptor.CursorPosition>
                           <ui:CursorPosition Position="Center">
                             <ui:CursorPosition.OffsetX>
@@ -304,31 +308,31 @@
                           </uc:CVCache.CvTables>
                           <uc:CVCache.CvUiElements>
                             <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="32">
-                              <uc:CvElementInfo Category="InputBox" Region="6, 58, 194, 30" />
-                              <uc:CvElementInfo Category="InputBox" Region="342, 58, 179, 30" />
-                              <uc:CvElementInfo Category="InputBox" Region="205, 58, 134, 30" />
-                              <uc:CvElementInfo Category="InputBox" Region="525, 57, 194, 31" />
-                              <uc:CvElementInfo Category="InputBox" Region="1130, 58, 134, 30" />
-                              <uc:CvElementInfo Category="InputBox" Region="905, 58, 220, 30" />
-                              <uc:CvElementInfo Category="InputBox" Region="722, 58, 178, 31" />
-                              <uc:CvElementInfo Category="Button" Region="1205, 96, 54, 30" />
-                              <uc:CvElementInfo Category="CheckBox" Region="4, 642, 18, 18" />
-                              <uc:CvElementInfo Category="Icon" Region="1, 0, 18, 21" />
-                              <uc:CvElementInfo Category="MaximizeButton" Region="1198, 1, 19, 18" />
-                              <uc:CvElementInfo Category="CloseButton" Region="1246, 1, 19, 18" />
-                              <uc:CvElementInfo Category="Button" Region="366, 637, 100, 30" />
-                              <uc:CvElementInfo Category="MinimizeButton" Region="1152, 2, 20, 16" />
-                              <uc:CvElementInfo Category="CheckBox" Region="50, 140, 14, 15" />
-                              <uc:CvElementInfo Category="Button" Region="116, 29, 82, 29" />
-                              <uc:CvElementInfo Category="ArrowButton" Region="1266, 130, 15, 16" />
-                              <uc:CvElementInfo Category="ArrowButton" Region="1266, 618, 15, 16" />
-                              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1184, 34, 22, 20" />
-                              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="184, 36, 14, 16" />
-                              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="48, 138, 18, 18" />
-                              <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="6, 189, 1264, 445" />
-                              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1198, 2, 16, 17" />
-                              <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="116, 29, 84, 29" />
-                              <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="184, 34, 16, 20" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="InputBox" Region="6, 58, 194, 30" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="InputBox" Region="342, 58, 179, 30" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="InputBox" Region="205, 58, 134, 30" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="InputBox" Region="525, 57, 194, 31" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="InputBox" Region="1130, 58, 134, 30" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="InputBox" Region="905, 58, 220, 30" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="InputBox" Region="722, 58, 178, 31" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="Button" Region="1205, 96, 54, 30" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="CheckBox" Region="4, 642, 18, 18" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="Icon" Region="1, 0, 18, 21" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="MaximizeButton" Region="1198, 1, 19, 18" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="CloseButton" Region="1246, 1, 19, 18" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="Button" Region="366, 637, 100, 30" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="MinimizeButton" Region="1152, 2, 20, 16" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="CheckBox" Region="50, 140, 14, 15" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="Button" Region="116, 29, 82, 29" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="ArrowButton" Region="1266, 130, 15, 16" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="ArrowButton" Region="1266, 618, 15, 16" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="Icon" Confidence="Runtime" Region="1184, 34, 22, 20" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="Icon" Confidence="Runtime" Region="184, 36, 14, 16" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="Icon" Confidence="Runtime" Region="48, 138, 18, 18" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="InputBox" Confidence="Runtime" Region="6, 189, 1264, 445" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="Icon" Confidence="Runtime" Region="1198, 2, 16, 17" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="InputBox" Confidence="Runtime" Region="116, 29, 84, 29" />
+                              <uc:CvElementInfo Description="{x:Null}" Category="ArrowButton" Confidence="Runtime" Region="184, 34, 16, 20" />
                             </scg:List>
                           </uc:CVCache.CvUiElements>
                           <uc:CVCache.OcrTexts>
@@ -407,7 +411,7 @@
                     <ActivityFunc.Argument>
                       <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
                     </ActivityFunc.Argument>
-                    <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25.333333333333332" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_6" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" UseLocalServer="True" />
+                    <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="400,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_6" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" UseLocalServer="True" UseSeparateOcrProcess="True" />
                   </ActivityFunc>
                 </p:CVScope.OCREngine>
                 <p:CVScope.Target>
@@ -427,8 +431,15 @@
             </Sequence>
           </ActivityAction>
         </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.OCREngine>
+          <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+            <ActivityFunc.Argument>
+              <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+            </ActivityFunc.Argument>
+          </ActivityFunc>
+        </uix:NApplicationCard.OCREngine>
         <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="-11, -11, 1942, 1030" FilePath="C:\Users\MorganFulgoni\AppData\Local\Programs\ERP Commander\erpcommander_noconsole.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAQ1SURBVFhHvZdvTBtlHMcvJia+Mr7cYqIvNC5hcclemaGOKtNkxj8sGYGNTY2izVSWSOKIm/yRsRkVMjrUjLEhmurQzW4Mg8tamNXJOstgghTUbUUotDDoCgXu2t7dV39XrtzdA4w2C9/k+6LX3z2f7z333HP347g55ee/tdbhaLV29/SMejx9cl9fP+6kaczu7p7R8w6H1WwuSFO5iqqra7L9/oCAFZLf7xcsls+2Jq5cC5+OyPjKFUbhqQkUnZ5Ac88MREk/gCRJcLS2YX/FQewrLsU3355AODytLwLguXUFlt69KOnMR23/AfhmvIn/KITZbE7jaNrVgwMTMTxd7ceasiGddzaMYSYiKzWCIGD3u4V4LP0JnV94aQtueOcBX/79KTJaVum86dwDaB05k6ghNkf3nH5IMrClNsDAVZc0B5WTLIdrGLjq3O07IIoi2kftDHw+xIMYnpsJYnO0OOhH52CEgWq9rsKH8GwUpsxnGLDWrsu/Y497OwPWura/QglAbI5WKOn01RkGarTLM8wAjT5lsyHPmc5AtaY1QSJ2IsDFazwD1DqtfAhjoVk8vtHEQLX+2enEblcWA9WaFiYTICLKMB0aYcCqd50YV+qKS8sYqOrNz78Inufx46CVgao2tayGJ9TJBiC5BwSsP+hj4JkWPwKTolITDAaRnbuNgW98KlO5/yRJlpRpXgje8E9lgscEIHnHY3j/TBDPfR5A1pEAKu0hhGb1GwE980eO1uHlV19DzrY8lJXv1z2CJArRPGhVbgetiT3uPFwas+tqFgywkko5QJQX0WXzoqnYDVvRZfx6tA+TgVlj2W2VUgBhKoqThZdQu9Wuc/2ONoz0xjer5SqlABdq/mTgqq1v/gIxYnhxLKGkA8QiEo7ltjJgrQfcY8bTFlXSAabHeQZodO+5IeNpiyrpAGJMwvG8Ngaq9WBXfMNajpIOQLp4vJ+Bqm4s+A2SGH9tL0cpBYgJIs6WdDDwr193Ytw7ZSxfUikFIMmSjL8uDMNe1Y2fPupCx/fXwU9FjWW3VcoB7pRSDxDyAycLgQ8fBT54CKjLAW649DV8BCivBx7OBu7JANa/Ahw7C8jzayS1ABP/AuXrgPdW6V10P3B17ntPiAKmtwFuA+tdnySGSi1A/U4WrrpkDcBPAocaWbDWbR3KUMkHEMLxKzWCtf6jCdjwBgvV2vyxMpwSQP0oXZZCIyzQ6PYG4JEcFqp19j5lOOWjlNolI2dRSbH4NBuhWl9vB7KKWKjWpXXKcMTmqFczcpaUvYqFqj68Ob7KnV3AXeksmHzvJmD4pjIUsTlqFKlNMnIWFc1CYwELr8wAbvnm676wAXc/qYff9yxwPv7dmGjNSNQoJhWCRM99ywGgqRjo/AEQF9gJr/mAigbgnSqg+jvgZkg5HG9OLfHmVBWlWbn2fO7K/9d/fW4gZDOh4QMAAAAASUVORK5CYII=" InformativeScreenshot="57a7d59b775f1d0f395158faeda0a7be.png" IsExactTitleEnabled="True" Selector="&lt;wnd app='erpcommander_noconsole.exe' cls='TkTopLevel' title='Search' /&gt;" Title="Search" Version="V1" />
+          <uix:TargetApp Area="-11, -11, 1942, 1150" FilePath="C:\Users\KillianMathieu\AppData\Local\Programs\ERP Commander\erpcommander_noconsole.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAQ1SURBVFhHvZdvTBtlHMcvJia+Mr7cYqIvNC5hcclemaGOKtNkxj8sGYGNTY2izVSWSOKIm/yRsRkVMjrUjLEhmurQzW4Mg8tamNXJOstgghTUbUUotDDoCgXu2t7dV39XrtzdA4w2C9/k+6LX3z2f7z333HP347g55ee/tdbhaLV29/SMejx9cl9fP+6kaczu7p7R8w6H1WwuSFO5iqqra7L9/oCAFZLf7xcsls+2Jq5cC5+OyPjKFUbhqQkUnZ5Ac88MREk/gCRJcLS2YX/FQewrLsU3355AODytLwLguXUFlt69KOnMR23/AfhmvIn/KITZbE7jaNrVgwMTMTxd7ceasiGddzaMYSYiKzWCIGD3u4V4LP0JnV94aQtueOcBX/79KTJaVum86dwDaB05k6ghNkf3nH5IMrClNsDAVZc0B5WTLIdrGLjq3O07IIoi2kftDHw+xIMYnpsJYnO0OOhH52CEgWq9rsKH8GwUpsxnGLDWrsu/Y497OwPWura/QglAbI5WKOn01RkGarTLM8wAjT5lsyHPmc5AtaY1QSJ2IsDFazwD1DqtfAhjoVk8vtHEQLX+2enEblcWA9WaFiYTICLKMB0aYcCqd50YV+qKS8sYqOrNz78Inufx46CVgao2tayGJ9TJBiC5BwSsP+hj4JkWPwKTolITDAaRnbuNgW98KlO5/yRJlpRpXgje8E9lgscEIHnHY3j/TBDPfR5A1pEAKu0hhGb1GwE980eO1uHlV19DzrY8lJXv1z2CJArRPGhVbgetiT3uPFwas+tqFgywkko5QJQX0WXzoqnYDVvRZfx6tA+TgVlj2W2VUgBhKoqThZdQu9Wuc/2ONoz0xjer5SqlABdq/mTgqq1v/gIxYnhxLKGkA8QiEo7ltjJgrQfcY8bTFlXSAabHeQZodO+5IeNpiyrpAGJMwvG8Ngaq9WBXfMNajpIOQLp4vJ+Bqm4s+A2SGH9tL0cpBYgJIs6WdDDwr193Ytw7ZSxfUikFIMmSjL8uDMNe1Y2fPupCx/fXwU9FjWW3VcoB7pRSDxDyAycLgQ8fBT54CKjLAW649DV8BCivBx7OBu7JANa/Ahw7C8jzayS1ABP/AuXrgPdW6V10P3B17ntPiAKmtwFuA+tdnySGSi1A/U4WrrpkDcBPAocaWbDWbR3KUMkHEMLxKzWCtf6jCdjwBgvV2vyxMpwSQP0oXZZCIyzQ6PYG4JEcFqp19j5lOOWjlNolI2dRSbH4NBuhWl9vB7KKWKjWpXXKcMTmqFczcpaUvYqFqj68Ob7KnV3AXeksmHzvJmD4pjIUsTlqFKlNMnIWFc1CYwELr8wAbvnm676wAXc/qYff9yxwPv7dmGjNSNQoJhWCRM99ywGgqRjo/AEQF9gJr/mAigbgnSqg+jvgZkg5HG9OLfHmVBWlWbn2fO7K/9d/fW4gZDOh4QMAAAAASUVORK5CYII=" InformativeScreenshot="4499e21fcec8d6471e8e9666dda01a72.jpg" Selector="&lt;wnd app='erpcommander_noconsole.exe' cls='TkTopLevel' title='ERP Commander' /&gt;" Version="V2" />
         </uix:NApplicationCard.TargetApp>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
